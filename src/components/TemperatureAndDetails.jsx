@@ -68,20 +68,6 @@ function TemperatureAndDetails({
             {formatToLocalTime(sunset, timezone, "hh:mm a")}
           </span>
         </p>
-        <p className="font-light">|</p>
-
-        <UilSun />
-        <p className="font-light">
-          Highest:{" "}
-          <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
-        </p>
-        <p className="font-light">|</p>
-
-        <UilSun />
-        <p className="font-light">
-          Lowest:{" "}
-          <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
-        </p>
       </div>
     </div>
   );

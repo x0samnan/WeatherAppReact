@@ -34,11 +34,11 @@ function App() {
   }, [query, units]);
 
   const formatBackground = () => {
-    if (!weather) return "from-cyan-700 to-blue-700";
+    if (!weather) return "from-indigo-500 via-purple-500 to-pink-500";
     const threshold = units === "metric" ? 20 : 60;
-    if (weather.temp <= threshold) return "from-cyan-700 to-blue-700";
+    if (weather.temp <= threshold) return "from-indigo-500 via-purple-500 to-pink-500";
 
-    return "from-yellow-500 to-orange-700";
+    return "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500";
   };
 
   return (
