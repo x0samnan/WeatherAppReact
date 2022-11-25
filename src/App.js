@@ -35,7 +35,7 @@ function App() {
 
   const formatBackground = () => {
     if (!weather) return "from-indigo-500 via-purple-500 to-pink-500";
-    const threshold = units === "metric" ? 20 : 60;
+    const threshold = units === "metric" ? 20 : 70;
     if (weather.temp <= threshold) return "from-indigo-500 via-purple-500 to-pink-500";
 
     return "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500";

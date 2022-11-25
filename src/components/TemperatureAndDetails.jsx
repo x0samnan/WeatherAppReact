@@ -13,8 +13,6 @@ function TemperatureAndDetails({
     details,
     icon,
     temp,
-    temp_min,
-    temp_max,
     sunrise,
     sunset,
     speed,
