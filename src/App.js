@@ -9,8 +9,13 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header";
+  
 
 function App() {
+  useEffect(() => {
+    document.title = 'Weather App React';
+  }, []);
+
   const [query, setQuery] = useState({ q: "Kathmandu" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
