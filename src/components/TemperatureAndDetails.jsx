@@ -27,33 +27,35 @@ function TemperatureAndDetails({
         <p>{details}</p>
       </div>
 
-      <div className="flex flex-row items-center justify-between text-white py-3">
-        <img src={iconUrlFromCode(icon)} alt="" className="w-20" />
-        <p className="text-5xl">{`${temp.toFixed()}°`}</p>
+      <div className="flex flex-row items-center justify-center text-white py-3 space-x-10">
+        <img src={iconUrlFromCode(icon)} alt="" className="w-30" />
+        <p className="text-4xl">{`${temp.toFixed()}°`}</p>
         <div className="flex flex-col space-y-2">
+        <div className="flex flex-col items-center justify-between text-white py-3 space-y-3">
           <div className="flex font-light text-sm items-center justify-center">
             <UilTemperature size={18} className="mr-1" />
             Feels Like:
-            <span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
+            <span className="font-medium sm-1">{`${feels_like.toFixed()}°`}</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
             <UilTear size={18} className="mr-1" />
             Humidity:
-            <span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
+            <span className="font-medium sm-1">{`${humidity.toFixed()}%`}</span>
           </div>
           <div className="flex font-light text-sm items-center justify-center">
             <UilWind size={18} className="mr-1" />
             Wind:
-            <span className="font-medium ml-1">{`${speed.toFixed()} km/h`}</span>
+            <span className="font-medium sm-1">{`${speed.toFixed()} km/h`}</span>
           </div>
+        </div>
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-2 text-white text-sm py-3">
+      <div className="flex flex-row items-center justify-center space-x-10 text-white text-sm py-3">
         <UilSun />
         <p className="font-light">
           Sunrise:{" "}
-          <span className="font-medium ml-1">
+          <span className="font-medium sm-1">
             {formatToLocalTime(sunrise, timezone, "hh:mm a")}
           </span>
         </p>
@@ -62,7 +64,7 @@ function TemperatureAndDetails({
         <UilSunset />
         <p className="font-light">
           Sunset:{" "}
-          <span className="font-medium ml-1">
+          <span className="font-medium sm-1">
             {formatToLocalTime(sunset, timezone, "hh:mm a")}
           </span>
         </p>
