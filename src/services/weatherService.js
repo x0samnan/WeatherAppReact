@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-
+import dotenv from "dotenv";
 
 const API_KEY = process.env.OW_API; //Dotenv used
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
